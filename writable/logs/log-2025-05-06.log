@@ -30,3 +30,6 @@ Stack trace:
 #10 C:\laragon\www\ci4-mpm\system\Boot.php(104): CodeIgniter\Boot::runCommand(Object(CodeIgniter\CLI\Console))
 #11 C:\laragon\www\ci4-mpm\spark(87): CodeIgniter\Boot::bootSpark(Object(Config\Paths))
 #12 {main}
+DEBUG - 2025-05-06 09:52:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-06 09:53:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-06 09:53:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
