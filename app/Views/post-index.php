@@ -24,7 +24,9 @@
 
                 <?php endif ?>
 
-                <a href="<?php echo base_url('post/create') ?>" class="btn btn-md btn-success mb-3">TAMBAH DATA</a>
+                <a href="<?= site_url('post/create') ?>" class="btn btn-md btn-success mb-3">
+                    TAMBAH DATA
+                </a>
                 <table class="table table-bordered table-striped">
                     <thead class="thead-dark">
                         <tr>
