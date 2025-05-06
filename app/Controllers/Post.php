@@ -150,4 +150,24 @@ class Post extends Controller
                 return redirect()->to(base_url('post'));
             }
     }
+
+    /**
+     * delete function
+     */
+    public function delete($id)
+    {
+        //model intialize
+        $postModel = new PostModel();
+
+        $post = $postModel->find($id);
+
+        if($post) {
+            $postModel->delete($id);
+
+            //flash message
+            session()->setFlashdata('message', 'Post Berhasil Dihapus');
+
+            return redirect()->to(base_url('post'));
+        }
+    }
 }
