@@ -11,18 +11,21 @@ class Post extends Controller
     public function index()
     {
         
-        //model initialize
-        $postModel = new PostModel();
-
-        
-        //pager initialize
-        $pager = \Config\Services::pager();
-
-        $data = array(
-            'posts' => $postModel->paginate(10, 'post'),
-            'pager' => $postModel->pager
-        );
-
+        $search   = $this->request->getGet('search');
+        $postModel = new \App\Models\PostModel();
+    
+        if ($search) {
+            $postModel
+                ->like('title',   $search)
+                ->orLike('content', $search);
+        }
+    
+        $data = [
+            'posts'  => $postModel->paginate(10, 'post'),
+            'pager'  => $postModel->pager,
+            'search' => $search,
+        ];
+    
         return view('post-index', $data);
     }
     

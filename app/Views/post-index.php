@@ -24,6 +24,25 @@
 
                 <?php endif ?>
 
+                <form method="get" action="<?= site_url('post') ?>" class="mb-3">
+                    <div class="input-group mb-3">
+                        <input
+                            type="text"
+                            name="search"
+                            value="<?= esc($search) ?>"
+                            class="form-control"
+                            placeholder="Search posts…">
+                        <div class="input-group-append">
+                            <button class="btn btn-outline-secondary" type="submit">Search</button>
+                            <?php if (! empty($search)) : ?>
+                                <a href="<?= site_url('post') ?>"
+                                    class="btn btn-outline-secondary"
+                                    title="Clear search">×</a>
+                            <?php endif; ?>
+                        </div>
+                    </div>
+                </form>
+
                 <a href="<?= site_url('post/create') ?>" class="btn btn-md btn-success mb-3">
                     TAMBAH DATA
                 </a>
