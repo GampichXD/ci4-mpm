@@ -19,7 +19,7 @@ class Post extends Controller
         $pager = \Config\Services::pager();
 
         $data = array(
-            'posts' => $postModel->paginate(2, 'post'),
+            'posts' => $postModel->paginate(10, 'post'),
             'pager' => $postModel->pager
         );
 
